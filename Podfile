@@ -1,0 +1,7 @@
+platform :ios, '7.1'
+pod 'MBProgressHUD'
+pod 'OpenCV'
+pod 'Parse-iOS-SDK'
+pod 'PXAlertView'
+pod 'Reachability'
+pod 'SDWebImage'

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44299F8718DDC6EE0054A0E0 /* editPersonViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44299F8618DDC6EE0054A0E0 /* editPersonViewController.mm */; };
 		442B5EE918DC6A7C002ECFD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B5EE818DC6A7C002ECFD2 /* Foundation.framework */; };
 		442B5EEB18DC6A7C002ECFD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B5EEA18DC6A7C002ECFD2 /* CoreGraphics.framework */; };
 		442B5EED18DC6A7C002ECFD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B5EEC18DC6A7C002ECFD2 /* UIKit.framework */; };
@@ -17,8 +18,6 @@
 		442B5EFE18DC6A7C002ECFD2 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442B5EFC18DC6A7C002ECFD2 /* Main_iPhone.storyboard */; };
 		442B5F0118DC6A7C002ECFD2 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442B5EFF18DC6A7C002ECFD2 /* Main_iPad.storyboard */; };
 		442B5F0418DC6A7C002ECFD2 /* openCVFaceRecognition.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 442B5F0218DC6A7C002ECFD2 /* openCVFaceRecognition.xcdatamodeld */; };
-		442B5F0718DC6A7C002ECFD2 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442B5F0618DC6A7C002ECFD2 /* MasterViewController.m */; };
-		442B5F0A18DC6A7C002ECFD2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 442B5F0918DC6A7C002ECFD2 /* DetailViewController.m */; };
 		442B5F0C18DC6A7C002ECFD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 442B5F0B18DC6A7C002ECFD2 /* Images.xcassets */; };
 		442B5F1318DC6A7C002ECFD2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B5F1218DC6A7C002ECFD2 /* XCTest.framework */; };
 		442B5F1418DC6A7C002ECFD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B5EE818DC6A7C002ECFD2 /* Foundation.framework */; };
@@ -26,6 +25,13 @@
 		442B5F1618DC6A7C002ECFD2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B5EEE18DC6A7C002ECFD2 /* CoreData.framework */; };
 		442B5F1E18DC6A7C002ECFD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 442B5F1C18DC6A7C002ECFD2 /* InfoPlist.strings */; };
 		442B5F2018DC6A7C002ECFD2 /* openCVFaceRecognitionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 442B5F1F18DC6A7C002ECFD2 /* openCVFaceRecognitionTests.m */; };
+		442B5F2A18DC842D002ECFD2 /* 112-group.png in Resources */ = {isa = PBXBuildFile; fileRef = 442B5F2918DC842D002ECFD2 /* 112-group.png */; };
+		442B5F2C18DC8450002ECFD2 /* 123-id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 442B5F2B18DC8450002ECFD2 /* 123-id-card.png */; };
+		442B5F2F18DC871F002ECFD2 /* peopleViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 442B5F2E18DC871F002ECFD2 /* peopleViewController.mm */; };
+		442B5F3318DC8773002ECFD2 /* newPersonViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 442B5F3218DC8773002ECFD2 /* newPersonViewController.mm */; };
+		442B5F3618DC888C002ECFD2 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 442B5F3518DC888C002ECFD2 /* People.m */; };
+		442B5F3818DC8C11002ECFD2 /* profile-photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 442B5F3718DC8C11002ECFD2 /* profile-photo.jpg */; };
+		5315BE7E4BAE4FEE977E8786 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CF66E5CD2443F083D8D637 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44299F8518DDC6EE0054A0E0 /* editPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editPersonViewController.h; sourceTree = "<group>"; };
+		44299F8618DDC6EE0054A0E0 /* editPersonViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = editPersonViewController.mm; sourceTree = "<group>"; };
 		442B5EE518DC6A7C002ECFD2 /* openCVFaceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openCVFaceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		442B5EE818DC6A7C002ECFD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		442B5EEA18DC6A7C002ECFD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,16 +61,23 @@
 		442B5EFD18DC6A7C002ECFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		442B5F0018DC6A7C002ECFD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		442B5F0318DC6A7C002ECFD2 /* openCVFaceRecognition.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = openCVFaceRecognition.xcdatamodel; sourceTree = "<group>"; };
-		442B5F0518DC6A7C002ECFD2 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		442B5F0618DC6A7C002ECFD2 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		442B5F0818DC6A7C002ECFD2 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		442B5F0918DC6A7C002ECFD2 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		442B5F0B18DC6A7C002ECFD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		442B5F1118DC6A7C002ECFD2 /* openCVFaceRecognitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = openCVFaceRecognitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		442B5F1218DC6A7C002ECFD2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		442B5F1B18DC6A7C002ECFD2 /* openCVFaceRecognitionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "openCVFaceRecognitionTests-Info.plist"; sourceTree = "<group>"; };
 		442B5F1D18DC6A7C002ECFD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		442B5F1F18DC6A7C002ECFD2 /* openCVFaceRecognitionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = openCVFaceRecognitionTests.m; sourceTree = "<group>"; };
+		442B5F2918DC842D002ECFD2 /* 112-group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "112-group.png"; sourceTree = "<group>"; };
+		442B5F2B18DC8450002ECFD2 /* 123-id-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "123-id-card.png"; sourceTree = "<group>"; };
+		442B5F2D18DC871F002ECFD2 /* peopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = peopleViewController.h; sourceTree = "<group>"; };
+		442B5F2E18DC871F002ECFD2 /* peopleViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = peopleViewController.mm; sourceTree = "<group>"; };
+		442B5F3118DC8773002ECFD2 /* newPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newPersonViewController.h; sourceTree = "<group>"; };
+		442B5F3218DC8773002ECFD2 /* newPersonViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = newPersonViewController.mm; sourceTree = "<group>"; };
+		442B5F3418DC888C002ECFD2 /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		442B5F3518DC888C002ECFD2 /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
+		442B5F3718DC8C11002ECFD2 /* profile-photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "profile-photo.jpg"; sourceTree = "<group>"; };
+		CBE41EC740A64EAA844CAECA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F9CF66E5CD2443F083D8D637 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +89,7 @@
 				442B5EEF18DC6A7C002ECFD2 /* CoreData.framework in Frameworks */,
 				442B5EED18DC6A7C002ECFD2 /* UIKit.framework in Frameworks */,
 				442B5EE918DC6A7C002ECFD2 /* Foundation.framework in Frameworks */,
+				5315BE7E4BAE4FEE977E8786 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +114,7 @@
 				442B5F1918DC6A7C002ECFD2 /* openCVFaceRecognitionTests */,
 				442B5EE718DC6A7C002ECFD2 /* Frameworks */,
 				442B5EE618DC6A7C002ECFD2 /* Products */,
+				CBE41EC740A64EAA844CAECA /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +135,7 @@
 				442B5EEC18DC6A7C002ECFD2 /* UIKit.framework */,
 				442B5EEE18DC6A7C002ECFD2 /* CoreData.framework */,
 				442B5F1218DC6A7C002ECFD2 /* XCTest.framework */,
+				F9CF66E5CD2443F083D8D637 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,14 +143,19 @@
 		442B5EF018DC6A7C002ECFD2 /* openCVFaceRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				442B5F3018DC872B002ECFD2 /* Images */,
 				442B5EF918DC6A7C002ECFD2 /* AppDelegate.h */,
 				442B5EFA18DC6A7C002ECFD2 /* AppDelegate.m */,
+				442B5F3418DC888C002ECFD2 /* People.h */,
+				442B5F3518DC888C002ECFD2 /* People.m */,
+				442B5F2D18DC871F002ECFD2 /* peopleViewController.h */,
+				442B5F2E18DC871F002ECFD2 /* peopleViewController.mm */,
+				442B5F3118DC8773002ECFD2 /* newPersonViewController.h */,
+				442B5F3218DC8773002ECFD2 /* newPersonViewController.mm */,
+				44299F8518DDC6EE0054A0E0 /* editPersonViewController.h */,
+				44299F8618DDC6EE0054A0E0 /* editPersonViewController.mm */,
 				442B5EFC18DC6A7C002ECFD2 /* Main_iPhone.storyboard */,
 				442B5EFF18DC6A7C002ECFD2 /* Main_iPad.storyboard */,
-				442B5F0518DC6A7C002ECFD2 /* MasterViewController.h */,
-				442B5F0618DC6A7C002ECFD2 /* MasterViewController.m */,
-				442B5F0818DC6A7C002ECFD2 /* DetailViewController.h */,
-				442B5F0918DC6A7C002ECFD2 /* DetailViewController.m */,
 				442B5F0B18DC6A7C002ECFD2 /* Images.xcassets */,
 				442B5F0218DC6A7C002ECFD2 /* openCVFaceRecognition.xcdatamodeld */,
 				442B5EF118DC6A7C002ECFD2 /* Supporting Files */,
@@ -169,6 +192,16 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		442B5F3018DC872B002ECFD2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				442B5F3718DC8C11002ECFD2 /* profile-photo.jpg */,
+				442B5F2B18DC8450002ECFD2 /* 123-id-card.png */,
+				442B5F2918DC842D002ECFD2 /* 112-group.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 442B5F2318DC6A7C002ECFD2 /* Build configuration list for PBXNativeTarget "openCVFaceRecognition" */;
 			buildPhases = (
+				1E234647BEDA4346924394DC /* Check Pods Manifest.lock */,
 				442B5EE118DC6A7C002ECFD2 /* Sources */,
 				442B5EE218DC6A7C002ECFD2 /* Frameworks */,
 				442B5EE318DC6A7C002ECFD2 /* Resources */,
+				1392E6A6082E40A0B6C55342 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -246,9 +281,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				442B5F0118DC6A7C002ECFD2 /* Main_iPad.storyboard in Resources */,
+				442B5F2C18DC8450002ECFD2 /* 123-id-card.png in Resources */,
 				442B5F0C18DC6A7C002ECFD2 /* Images.xcassets in Resources */,
 				442B5EFE18DC6A7C002ECFD2 /* Main_iPhone.storyboard in Resources */,
+				442B5F3818DC8C11002ECFD2 /* profile-photo.jpg in Resources */,
 				442B5EF518DC6A7C002ECFD2 /* InfoPlist.strings in Resources */,
+				442B5F2A18DC842D002ECFD2 /* 112-group.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,14 +300,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1392E6A6082E40A0B6C55342 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E234647BEDA4346924394DC /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		442B5EE118DC6A7C002ECFD2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				442B5F0A18DC6A7C002ECFD2 /* DetailViewController.m in Sources */,
-				442B5F0718DC6A7C002ECFD2 /* MasterViewController.m in Sources */,
+				442B5F3618DC888C002ECFD2 /* People.m in Sources */,
 				442B5EFB18DC6A7C002ECFD2 /* AppDelegate.m in Sources */,
+				442B5F3318DC8773002ECFD2 /* newPersonViewController.mm in Sources */,
+				44299F8718DDC6EE0054A0E0 /* editPersonViewController.mm in Sources */,
+				442B5F2F18DC871F002ECFD2 /* peopleViewController.mm in Sources */,
 				442B5F0418DC6A7C002ECFD2 /* openCVFaceRecognition.xcdatamodeld in Sources */,
 				442B5EF718DC6A7C002ECFD2 /* main.m in Sources */,
 			);
@@ -403,6 +476,7 @@
 		};
 		442B5F2418DC6A7C002ECFD2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE41EC740A64EAA844CAECA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -410,12 +484,14 @@
 				GCC_PREFIX_HEADER = "openCVFaceRecognition/openCVFaceRecognition-Prefix.pch";
 				INFOPLIST_FILE = "openCVFaceRecognition/openCVFaceRecognition-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		442B5F2518DC6A7C002ECFD2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBE41EC740A64EAA844CAECA /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -423,6 +499,7 @@
 				GCC_PREFIX_HEADER = "openCVFaceRecognition/openCVFaceRecognition-Prefix.pch";
 				INFOPLIST_FILE = "openCVFaceRecognition/openCVFaceRecognition-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -486,6 +563,7 @@
 				442B5F2518DC6A7C002ECFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		442B5F2618DC6A7C002ECFD2 /* Build configuration list for PBXNativeTarget "openCVFaceRecognitionTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +572,7 @@
 				442B5F2818DC6A7C002ECFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

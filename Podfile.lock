@@ -1,0 +1,30 @@
+PODS:
+  - Facebook-iOS-SDK (3.13.0)
+  - MBProgressHUD (0.8)
+  - OpenCV (2.4.8)
+  - Parse-iOS-SDK (1.2.18):
+    - Facebook-iOS-SDK (~> 3.7)
+  - PXAlertView (0.1.0)
+  - Reachability (3.1.1)
+  - SDWebImage (3.5.4):
+    - SDWebImage/Core
+  - SDWebImage/Core (3.5.4)
+
+DEPENDENCIES:
+  - MBProgressHUD
+  - OpenCV
+  - Parse-iOS-SDK
+  - PXAlertView
+  - Reachability
+  - SDWebImage
+
+SPEC CHECKSUMS:
+  Facebook-iOS-SDK: 5788541337dc88265bc940cb5ffb05915f9b64e3
+  MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622
+  OpenCV: ea63ea6f551e4faf51f24712fcfd1e3d3345e7d3
+  Parse-iOS-SDK: 48bfd538a107b6e1f29eebe59fa80c0f0b844dd1
+  PXAlertView: cb53133add03f612ff13424d9474bfde3a68dda2
+  Reachability: be4883bb93f31e38266ae3365e5600a317aae735
+  SDWebImage: 1a62010700adbba823b621fc217906739dbf6aa5
+
+COCOAPODS: 0.29.0
