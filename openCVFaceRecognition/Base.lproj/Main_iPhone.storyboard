@@ -327,10 +327,10 @@
             </objects>
             <point key="canvasLocation" x="1173" y="987"/>
         </scene>
-        <!--View Controller - Training Data-->
+        <!--Train Person View Controller - Training Person-->
         <scene sceneID="B42-HH-CK2">
             <objects>
-                <viewController id="q4F-Yk-DmS" sceneMemberID="viewController">
+                <viewController id="q4F-Yk-DmS" customClass="trainPersonViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cl1-ja-NA4"/>
                         <viewControllerLayoutGuide type="bottom" id="AbZ-lR-rcq"/>
@@ -338,9 +338,18 @@
                     <view key="view" contentMode="scaleToFill" id="AlF-FK-6sG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zme-KO-hG0">
+                                <rect key="frame" x="20" y="70" width="280" height="240"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Training Data" id="xFM-3n-kej"/>
+                    <navigationItem key="navigationItem" title="Training Person" id="xFM-3n-kej"/>
+                    <connections>
+                        <outlet property="previewImage" destination="zme-KO-hG0" id="eFi-Dj-9aD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="na9-SN-vpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
