@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "People.h"
+#import "trainPersonViewController.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 
 @interface editPersonViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIAlertViewDelegate>
@@ -17,8 +18,7 @@
 }
 
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) NSManagedObjectID *personID;
-
+@property (nonatomic, retain) People *person;
 @property (strong, nonatomic) IBOutlet UITextField *personsNameTextField;
 @property (strong, nonatomic) IBOutlet UIImageView *profilePictureImage;
 

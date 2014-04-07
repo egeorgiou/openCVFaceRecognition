@@ -14,7 +14,7 @@
 
 @implementation editPersonViewController
 
-@synthesize personsNameTextField, profilePictureImage, personID;
+@synthesize personsNameTextField, profilePictureImage, person;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -77,7 +77,7 @@
 - (IBAction)updateButtonPressed:(id)sender {
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     [fetchRequest setEntity:[NSEntityDescription entityForName:@"People" inManagedObjectContext:self.managedObjectContext]];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(self = %@)", personID];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(self = %@)", person.objectID];
     [fetchRequest setPredicate:predicate];
     NSError *error = nil;
     NSArray *fetchRecords = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
@@ -104,21 +104,15 @@
 
 - (void)getPeopleDetails
 {
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-    [fetchRequest setEntity:[NSEntityDescription entityForName:@"People" inManagedObjectContext:self.managedObjectContext]];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(self = %@)", personID];
-    [fetchRequest setPredicate:predicate];
-    NSError *error = nil;
-    NSArray *fetchRecords = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    if (fetchRecords.count == 1) {
-        People *record = [fetchRecords objectAtIndex:0];
-        [personsNameTextField setText:[NSString stringWithFormat:@"%@", record.name]];
-        [profilePictureImage setImage:[UIImage imageWithData:record.profileimage]];
-    }
-    else
-    {
-        NSLog(@"error - %@", error);
+    [personsNameTextField setText:[NSString stringWithFormat:@"%@", person.name]];
+    [profilePictureImage setImage:[UIImage imageWithData:person.profileimage]];
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"trainperson"]) {
+        trainPersonViewController *trainPersonSegueViewController = [segue destinationViewController];
+        trainPersonSegueViewController.person = person;
     }
 }
 

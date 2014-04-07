@@ -16,7 +16,7 @@
 
 @implementation peopleViewController
 
-@synthesize tableview, personIdArray, personNameArray, personCreatedDateArray, indexNumber;
+@synthesize tableview, personArray, indexNumber;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,9 +44,7 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    personIdArray = [[NSMutableArray alloc] init];
-    personNameArray = [[NSMutableArray alloc] init];
-    personCreatedDateArray = [[NSMutableArray alloc] init];
+    personArray = [[NSMutableArray alloc] init];
     
     [self getPeopleDetails];
 }
@@ -59,9 +57,7 @@
 
 - (void)refreshTableview
 {
-    personIdArray = [[NSMutableArray alloc] init];
-    personNameArray = [[NSMutableArray alloc] init];
-    personCreatedDateArray = [[NSMutableArray alloc] init];
+    personArray = [[NSMutableArray alloc] init];
     
     [self getPeopleDetails];
     
@@ -81,11 +77,7 @@
     
     if (fetchRecords.count > 0) {
         for (int i = 0; i < fetchRecords.count; i++) {
-            People *record = [fetchRecords objectAtIndex:i];
-            
-            [personIdArray addObject:record.objectID];
-            [personNameArray addObject:record.name];
-            [personCreatedDateArray addObject:record.created];
+            [personArray addObject:[fetchRecords objectAtIndex:i]];
         }
         
         [tableview reloadData];
@@ -109,7 +101,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return personIdArray.count;
+    return personArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -122,8 +114,10 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
     
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@", [personNameArray objectAtIndex:indexPath.row]]];
-    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", [personCreatedDateArray objectAtIndex:indexPath.row]]];
+    People *record = [personArray objectAtIndex:indexPath.row];
+    
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@ (%lu)", record.name, (unsigned long)[record.images count]]];
+    [cell.detailTextLabel setText:[NSString stringWithFormat:@"%@", record.created]];
     
     return cell;
 }
@@ -141,7 +135,9 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSManagedObject *objectToDelete = [self.managedObjectContext objectWithID:[personIdArray objectAtIndex:indexPath.row]];
+        People *record = [personArray objectAtIndex:indexPath.row];
+        
+        NSManagedObject *objectToDelete = [self.managedObjectContext objectWithID:record.objectID];
         [self.managedObjectContext deleteObject:objectToDelete];
 
         NSError* error;
@@ -149,9 +145,7 @@
             NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
         }
         
-        [personIdArray removeObjectAtIndex:indexPath.row];
-        [personNameArray removeObjectAtIndex:indexPath.row];
-        [personCreatedDateArray removeObjectAtIndex:indexPath.row];
+        [personArray removeObjectAtIndex:indexPath.row];
         
         [self.tableview reloadData];
     }
@@ -167,7 +161,7 @@
 {
     if ([segue.identifier isEqualToString:@"editperson"]) {
         editPersonViewController *editPersonSegueViewController = [segue destinationViewController];
-        editPersonSegueViewController.personID = [personIdArray objectAtIndex:[indexNumber integerValue]];
+        editPersonSegueViewController.person = [personArray objectAtIndex:[indexNumber integerValue]];
     }
 }
 

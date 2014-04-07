@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4421B14D18F0083300D42F84 /* People.m in Sources */ = {isa = PBXBuildFile; fileRef = 4421B14C18F0083300D42F84 /* People.m */; };
+		4421B15018F0083300D42F84 /* Images.m in Sources */ = {isa = PBXBuildFile; fileRef = 4421B14F18F0083300D42F84 /* Images.m */; };
 		44299F8718DDC6EE0054A0E0 /* editPersonViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44299F8618DDC6EE0054A0E0 /* editPersonViewController.mm */; };
 		442B5EE918DC6A7C002ECFD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B5EE818DC6A7C002ECFD2 /* Foundation.framework */; };
 		442B5EEB18DC6A7C002ECFD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B5EEA18DC6A7C002ECFD2 /* CoreGraphics.framework */; };
@@ -29,8 +31,9 @@
 		442B5F2C18DC8450002ECFD2 /* 123-id-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 442B5F2B18DC8450002ECFD2 /* 123-id-card.png */; };
 		442B5F2F18DC871F002ECFD2 /* peopleViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 442B5F2E18DC871F002ECFD2 /* peopleViewController.mm */; };
 		442B5F3318DC8773002ECFD2 /* newPersonViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 442B5F3218DC8773002ECFD2 /* newPersonViewController.mm */; };
-		442B5F3618DC888C002ECFD2 /* People.mm in Sources */ = {isa = PBXBuildFile; fileRef = 442B5F3518DC888C002ECFD2 /* People.mm */; };
 		442B5F3818DC8C11002ECFD2 /* profile-photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 442B5F3718DC8C11002ECFD2 /* profile-photo.jpg */; };
+		4463EEA718F220C500CF1430 /* 00095.png in Resources */ = {isa = PBXBuildFile; fileRef = 4463EEA618F220C500CF1430 /* 00095.png */; };
+		4471C8CE18EED052008CAD18 /* recognitionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4471C8CD18EED052008CAD18 /* recognitionViewController.mm */; };
 		44BD497118E1CAAB00417055 /* trainPersonViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44BD497018E1CAAB00417055 /* trainPersonViewController.mm */; };
 		44BD497318E1D19300417055 /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 44BD497218E1D19300417055 /* haarcascade_frontalface_alt2.xml */; };
 		5315BE7E4BAE4FEE977E8786 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CF66E5CD2443F083D8D637 /* libPods.a */; };
@@ -47,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4421B14B18F0083300D42F84 /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
+		4421B14C18F0083300D42F84 /* People.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = People.m; sourceTree = "<group>"; };
+		4421B14E18F0083300D42F84 /* Images.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Images.h; sourceTree = "<group>"; };
+		4421B14F18F0083300D42F84 /* Images.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Images.m; sourceTree = "<group>"; };
 		44299F8518DDC6EE0054A0E0 /* editPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = editPersonViewController.h; sourceTree = "<group>"; };
 		44299F8618DDC6EE0054A0E0 /* editPersonViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = editPersonViewController.mm; sourceTree = "<group>"; };
 		442B5EE518DC6A7C002ECFD2 /* openCVFaceRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openCVFaceRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,9 +82,10 @@
 		442B5F2E18DC871F002ECFD2 /* peopleViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = peopleViewController.mm; sourceTree = "<group>"; };
 		442B5F3118DC8773002ECFD2 /* newPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newPersonViewController.h; sourceTree = "<group>"; };
 		442B5F3218DC8773002ECFD2 /* newPersonViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = newPersonViewController.mm; sourceTree = "<group>"; };
-		442B5F3418DC888C002ECFD2 /* People.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = People.h; sourceTree = "<group>"; };
-		442B5F3518DC888C002ECFD2 /* People.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = People.mm; sourceTree = "<group>"; };
 		442B5F3718DC8C11002ECFD2 /* profile-photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "profile-photo.jpg"; sourceTree = "<group>"; };
+		4463EEA618F220C500CF1430 /* 00095.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 00095.png; sourceTree = "<group>"; };
+		4471C8CC18EED052008CAD18 /* recognitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = recognitionViewController.h; sourceTree = "<group>"; };
+		4471C8CD18EED052008CAD18 /* recognitionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = recognitionViewController.mm; sourceTree = "<group>"; };
 		44BD496F18E1CAAB00417055 /* trainPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trainPersonViewController.h; sourceTree = "<group>"; };
 		44BD497018E1CAAB00417055 /* trainPersonViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = trainPersonViewController.mm; sourceTree = "<group>"; };
 		44BD497218E1D19300417055 /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
@@ -151,8 +159,8 @@
 				442B5F3018DC872B002ECFD2 /* Images */,
 				442B5EF918DC6A7C002ECFD2 /* AppDelegate.h */,
 				442B5EFA18DC6A7C002ECFD2 /* AppDelegate.mm */,
-				442B5F3418DC888C002ECFD2 /* People.h */,
-				442B5F3518DC888C002ECFD2 /* People.mm */,
+				4471C8CC18EED052008CAD18 /* recognitionViewController.h */,
+				4471C8CD18EED052008CAD18 /* recognitionViewController.mm */,
 				442B5F2D18DC871F002ECFD2 /* peopleViewController.h */,
 				442B5F2E18DC871F002ECFD2 /* peopleViewController.mm */,
 				442B5F3118DC8773002ECFD2 /* newPersonViewController.h */,
@@ -165,6 +173,10 @@
 				442B5EFF18DC6A7C002ECFD2 /* Main_iPad.storyboard */,
 				442B5F0B18DC6A7C002ECFD2 /* Images.xcassets */,
 				442B5F0218DC6A7C002ECFD2 /* openCVFaceRecognition.xcdatamodeld */,
+				4421B14E18F0083300D42F84 /* Images.h */,
+				4421B14F18F0083300D42F84 /* Images.m */,
+				4421B14B18F0083300D42F84 /* People.h */,
+				4421B14C18F0083300D42F84 /* People.m */,
 				442B5EF118DC6A7C002ECFD2 /* Supporting Files */,
 			);
 			path = openCVFaceRecognition;
@@ -203,6 +215,7 @@
 		442B5F3018DC872B002ECFD2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4463EEA618F220C500CF1430 /* 00095.png */,
 				442B5F3718DC8C11002ECFD2 /* profile-photo.jpg */,
 				442B5F2B18DC8450002ECFD2 /* 123-id-card.png */,
 				442B5F2918DC842D002ECFD2 /* 112-group.png */,
@@ -294,6 +307,7 @@
 				442B5F0C18DC6A7C002ECFD2 /* Images.xcassets in Resources */,
 				442B5EFE18DC6A7C002ECFD2 /* Main_iPhone.storyboard in Resources */,
 				442B5F3818DC8C11002ECFD2 /* profile-photo.jpg in Resources */,
+				4463EEA718F220C500CF1430 /* 00095.png in Resources */,
 				442B5EF518DC6A7C002ECFD2 /* InfoPlist.strings in Resources */,
 				442B5F2A18DC842D002ECFD2 /* 112-group.png in Resources */,
 			);
@@ -347,12 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				442B5F3618DC888C002ECFD2 /* People.mm in Sources */,
 				442B5EFB18DC6A7C002ECFD2 /* AppDelegate.mm in Sources */,
 				44BD497118E1CAAB00417055 /* trainPersonViewController.mm in Sources */,
+				4421B14D18F0083300D42F84 /* People.m in Sources */,
 				442B5F3318DC8773002ECFD2 /* newPersonViewController.mm in Sources */,
 				44299F8718DDC6EE0054A0E0 /* editPersonViewController.mm in Sources */,
 				442B5F2F18DC871F002ECFD2 /* peopleViewController.mm in Sources */,
+				4471C8CE18EED052008CAD18 /* recognitionViewController.mm in Sources */,
+				4421B15018F0083300D42F84 /* Images.m in Sources */,
 				442B5F0418DC6A7C002ECFD2 /* openCVFaceRecognition.xcdatamodeld in Sources */,
 				442B5EF718DC6A7C002ECFD2 /* main.mm in Sources */,
 			);

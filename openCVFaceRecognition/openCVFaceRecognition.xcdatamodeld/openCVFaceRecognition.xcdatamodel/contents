@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5063" systemVersion="13C64" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Images" representedClassName="Images" syncable="YES">
+        <attribute name="image" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="People" inverseName="images" inverseEntity="People" syncable="YES"/>
+    </entity>
     <entity name="People" representedClassName="People" syncable="YES">
         <attribute name="created" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="profileimage" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="images" toMany="YES" deletionRule="Cascade" destinationEntity="Images" inverseName="person" inverseEntity="Images" syncable="YES"/>
     </entity>
     <elements>
-        <element name="People" positionX="261" positionY="198" width="128" height="90"/>
+        <element name="Images" positionX="261" positionY="225" width="128" height="73"/>
+        <element name="People" positionX="52" positionY="146" width="101" height="103"/>
     </elements>
 </model>

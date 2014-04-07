@@ -1,4 +1,6 @@
 platform :ios, '7.1'
+pod 'CRToast'
+pod 'FXLabel'
 pod 'MBProgressHUD'
 pod 'OpenCV'
 pod 'Parse-iOS-SDK'

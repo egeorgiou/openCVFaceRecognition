@@ -7,14 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import "People.h"
+#import "Images.h"
 #import <opencv2/highgui/cap_ios.h>
 
 @interface trainPersonViewController : UIViewController <CvVideoCameraDelegate>
 {
-    
+    cv::CascadeClassifier faceCascade;
 }
 
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, retain) People *person;
 @property (nonatomic, strong) CvVideoCamera* videoCamera;
 @property (strong, nonatomic) IBOutlet UIImageView *previewImage;
+
+@property (strong, nonatomic) IBOutlet UILabel *sampleTakenLabel;
+
+- (IBAction)startTrainingButtonPressed:(id)sender;
+- (IBAction)stopTrainingButtonPressed:(id)sender;
+- (IBAction)switchButtonPressed:(id)sender;
 
 @end

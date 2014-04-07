@@ -19,14 +19,9 @@
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *tableview;
-
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-
 @property (nonatomic, retain) NSNumber *indexNumber;
-
-@property (retain, nonatomic) NSMutableArray *personIdArray;
-@property (retain, nonatomic) NSMutableArray *personNameArray;
-@property (retain, nonatomic) NSMutableArray *personCreatedDateArray;
+@property (retain, nonatomic) NSMutableArray *personArray;
 
 - (IBAction)editButtonPressed:(id)sender;
 
