@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D4A620B94B354937B642E8B7"
+               BlueprintIdentifier = "88C37802211F464F96033B44"
                BuildableName = "libPods-FXLabel.a"
                BlueprintName = "Pods-FXLabel"
                ReferencedContainer = "container:Pods.xcodeproj">

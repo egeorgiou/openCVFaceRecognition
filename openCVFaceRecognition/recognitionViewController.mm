@@ -63,8 +63,16 @@ BOOL modeltrained;
 
 -(void) viewDidAppear:(BOOL)animated
 {
-    [self trainModel];
-    
+    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+	[self.navigationController.view addSubview:hud];
+	hud.labelText = @"Training Model";
+	
+	[hud showAnimated:YES whileExecutingBlock:^{
+		[self trainModel];
+	} completionBlock:^{
+		[hud removeFromSuperview];
+	}];
+ 
     [videoCamera start];
 }
 
@@ -190,6 +198,18 @@ BOOL modeltrained;
             model->train(images, labels);
             modeltrained = YES;
         }
+    /*NSDictionary *options = @{
+                kCRToastNotificationTypeKey : @(CRToastTypeNavigationBar),
+                kCRToastTextKey : @"Training completed",
+                kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                kCRToastBackgroundColorKey : [UIColor orangeColor],
+                kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight),
+                kCRToastInteractionRespondersKey : @(CRToastInteractionTypeAll)
+                };
+    [CRToastManager showNotificationWithOptions:options completionBlock:^{ NSLog(@"Completed");}];*/
 }
 
 - (IBAction)switchButtonPressed:(id)sender {

@@ -11,10 +11,12 @@
 #import "People.h"
 #import "Images.h"
 #import <opencv2/highgui/cap_ios.h>
+#import <CRToast/CRToast.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "FXLabel.h"
 
-@interface recognitionViewController : UIViewController <CvVideoCameraDelegate, MBProgressHUDDelegate>
+
+@interface recognitionViewController : UIViewController <CvVideoCameraDelegate>
 {
     cv::CascadeClassifier faceCascade;
     cv::Ptr<cv::FaceRecognizer> model;

@@ -1,6 +1,6 @@
 PODS:
   - CRToast (0.0.6)
-  - Facebook-iOS-SDK (3.13.0)
+  - Facebook-iOS-SDK (3.13.1)
   - FXLabel (1.5.7)
   - MBProgressHUD (0.8)
   - OpenCV (2.4.8)
@@ -24,10 +24,10 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   CRToast: 7def6720179d7c861b06222a82a4ad4bdfe476f0
-  Facebook-iOS-SDK: 5788541337dc88265bc940cb5ffb05915f9b64e3
+  Facebook-iOS-SDK: 0d121e16437981fabff9379e07bf646bd5ab245c
   FXLabel: 8ba02eb8efb2ce37f04b06d18da424a45a215d6e
   MBProgressHUD: 2bbc6f470111daf7f3eaa4eb12b8cbf01c4c0622
-  OpenCV: ea63ea6f551e4faf51f24712fcfd1e3d3345e7d3
+  OpenCV: 418f74b9632e02f9968cc61d5fae23674fc5151a
   Parse-iOS-SDK: 48bfd538a107b6e1f29eebe59fa80c0f0b844dd1
   PXAlertView: cb53133add03f612ff13424d9474bfde3a68dda2
   Reachability: be4883bb93f31e38266ae3365e5600a317aae735
