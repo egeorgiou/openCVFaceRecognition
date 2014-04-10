@@ -11,6 +11,7 @@ PODS:
   - SDWebImage (3.6):
     - SDWebImage/Core
   - SDWebImage/Core (3.6)
+  - TYMProgressBarView (0.3.0)
 
 DEPENDENCIES:
   - CRToast
@@ -21,6 +22,7 @@ DEPENDENCIES:
   - PXAlertView
   - Reachability
   - SDWebImage
+  - TYMProgressBarView
 
 SPEC CHECKSUMS:
   CRToast: 7def6720179d7c861b06222a82a4ad4bdfe476f0
@@ -32,5 +34,6 @@ SPEC CHECKSUMS:
   PXAlertView: cb53133add03f612ff13424d9474bfde3a68dda2
   Reachability: be4883bb93f31e38266ae3365e5600a317aae735
   SDWebImage: 7eb273e54ca8a2e506ad9bd5e80c35b2a4d7c95e
+  TYMProgressBarView: c847e03c74a7f28d10f9b1d9e7db544a9ea2e529
 
 COCOAPODS: 0.31.1

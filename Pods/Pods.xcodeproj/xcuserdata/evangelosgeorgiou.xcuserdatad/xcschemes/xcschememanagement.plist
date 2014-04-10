@@ -49,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-TYMProgressBarView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,52 +62,57 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>01C901788E054426A49D7218</key>
+		<key>10C91E048DEB4FE49DF534B9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>06DC262B3B9140B0A27EB793</key>
+		<key>55C90BDC5F7342DB8F3EE8D2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C5520414A074EF5B99F2436</key>
+		<key>68E5041BE99B484F82CA6CCF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>237FA5DD5F7047C692CA8036</key>
+		<key>81EB603E703A41B8B33C9273</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B39C89DD1534168ABDE08DA</key>
+		<key>87CE1AAA1F1442B0B0B46FA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>792FDE2662454462BDB9193C</key>
+		<key>8F165C46541141CEA25DADB6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>87981C41EA024B9096972C40</key>
+		<key>95D8D1AEF9674410A5CB3982</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>88C37802211F464F96033B44</key>
+		<key>9ADBD4D78F2F4E899E91E1A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF728AF09E71478093304AB8</key>
+		<key>C50E2FDF6990451489783716</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E6CD5556FA4543BCA81F31F3</key>
+		<key>C5EB6F400F79412CA194131D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0E2FC0EDD3C4835BAD9A6AE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

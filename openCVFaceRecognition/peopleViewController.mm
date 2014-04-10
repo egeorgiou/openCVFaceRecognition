@@ -132,6 +132,13 @@
     }
 }
 
+- (IBAction)addButtonPressed:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Add New Person" message:@"Enter the name of the new person" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:@"Save", nil];
+    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [alert show];
+    [[alert textFieldAtIndex:0] resignFirstResponder];
+}
+
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -154,14 +161,82 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     indexNumber = [NSNumber numberWithInteger:indexPath.item];
-    [self performSegueWithIdentifier:@"editperson" sender:self.view];
+    [self performSegueWithIdentifier:@"trainperson" sender:self.view];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"editperson"]) {
-        editPersonViewController *editPersonSegueViewController = [segue destinationViewController];
-        editPersonSegueViewController.person = [personArray objectAtIndex:[indexNumber integerValue]];
+    if ([segue.identifier isEqualToString:@"trainperson"]) {
+        trainPersonViewController *trainPersonSegueViewController = [segue destinationViewController];
+        trainPersonSegueViewController.person = [personArray objectAtIndex:[indexNumber integerValue]];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 1) {
+        UITextField *textField = [alertView textFieldAtIndex:0];
+        
+        if (![textField.text isEqualToString:@""]) {
+            People *newPerson = [NSEntityDescription insertNewObjectForEntityForName:@"People" inManagedObjectContext:self.managedObjectContext];
+            newPerson.name = textField.text;
+            newPerson.created = [NSDate date];
+            
+            NSError *error;
+            if (![self.managedObjectContext save:&error]) {
+                NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
+            }
+            
+            NSDictionary *options = @{
+                                      kCRToastNotificationTypeKey : @(CRToastTypeNavigationBar),
+                                      kCRToastTextKey : @"New person added...",
+                                      kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                      kCRToastBackgroundColorKey : [UIColor orangeColor],
+                                      kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                      kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                      kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                      kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                      };
+            [CRToastManager showNotificationWithOptions:options
+                                        completionBlock:^{
+                                            personArray = [[NSMutableArray alloc] init];
+                                            
+                                            [self getPeopleDetails];
+                                            NSLog(@"Completed");
+                                        }];
+        }
+        else {
+            NSDictionary *options = @{
+                                      kCRToastNotificationTypeKey : @(CRToastTypeNavigationBar),
+                                      kCRToastTextKey : @"Person not added...",
+                                      kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                      kCRToastBackgroundColorKey : [UIColor orangeColor],
+                                      kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                      kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                      kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                      kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                      };
+            [CRToastManager showNotificationWithOptions:options
+                                        completionBlock:^{
+                                            NSLog(@"Completed");
+                                        }];
+        }
+    }
+    else {
+        NSDictionary *options = @{
+                                  kCRToastNotificationTypeKey : @(CRToastTypeNavigationBar),
+                                  kCRToastTextKey : @"Person not added...",
+                                  kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
+                                  kCRToastBackgroundColorKey : [UIColor orangeColor],
+                                  kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
+                                  kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
+                                  kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
+                                  kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight)
+                                  };
+        [CRToastManager showNotificationWithOptions:options
+                                    completionBlock:^{
+                                        NSLog(@"Completed");
+                                    }];
     }
 }
 

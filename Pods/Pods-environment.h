@@ -66,3 +66,9 @@
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 6
 #define COCOAPODS_VERSION_PATCH_SDWebImage_Core 0
 
+// TYMProgressBarView
+#define COCOAPODS_POD_AVAILABLE_TYMProgressBarView
+#define COCOAPODS_VERSION_MAJOR_TYMProgressBarView 0
+#define COCOAPODS_VERSION_MINOR_TYMProgressBarView 3
+#define COCOAPODS_VERSION_PATCH_TYMProgressBarView 0
+
