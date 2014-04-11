@@ -16,7 +16,7 @@ BOOL modeltrained;
 
 @implementation recognitionViewController
 
-@synthesize videoCamera, previewImage, peopleArray, peopleDictionary, peopleNameDictionary, nameLabel, progressBarView;
+@synthesize videoCamera, previewImage, peopleArray, peopleDictionary, peopleNameDictionary, nameLabel, progressBarView, hud;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -72,7 +72,7 @@ BOOL modeltrained;
 
 -(void) viewDidAppear:(BOOL)animated
 {
-    MBProgressHUD *hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
+    hud = [[MBProgressHUD alloc] initWithView:self.navigationController.view];
 	[self.navigationController.view addSubview:hud];
 	hud.labelText = @"Training Model";
 	
@@ -197,7 +197,10 @@ BOOL modeltrained;
         NSError* error;
         NSArray *fetchedRecords = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
     
+        hud.labelText = @"Building face db";
         for (int i = 0; i < fetchedRecords.count; i++) {
+            hud.labelText = [NSString stringWithFormat:@"Build face %d/%lu", i, (unsigned long)fetchedRecords.count];
+            
             People *record = [fetchedRecords objectAtIndex:i];
             [peopleArray addObject:record];
             
@@ -216,22 +219,18 @@ BOOL modeltrained;
             }
         }
     
+    if (fetchedRecords.count == 0) {
+        
+    } else {
+        hud.labelText = @"Training faces";
         if (images.size() > 0 && labels.size() > 0) {
             model->train(images, labels);
             modeltrained = YES;
+            hud.labelText = @"Training complete...";
         }
-    /*NSDictionary *options = @{
-                kCRToastNotificationTypeKey : @(CRToastTypeNavigationBar),
-                kCRToastTextKey : @"Training completed",
-                kCRToastTextAlignmentKey : @(NSTextAlignmentCenter),
-                kCRToastBackgroundColorKey : [UIColor orangeColor],
-                kCRToastAnimationInTypeKey : @(CRToastAnimationTypeGravity),
-                kCRToastAnimationOutTypeKey : @(CRToastAnimationTypeGravity),
-                kCRToastAnimationInDirectionKey : @(CRToastAnimationDirectionLeft),
-                kCRToastAnimationOutDirectionKey : @(CRToastAnimationDirectionRight),
-                kCRToastInteractionRespondersKey : @(CRToastInteractionTypeAll)
-                };
-    [CRToastManager showNotificationWithOptions:options completionBlock:^{ NSLog(@"Completed");}];*/
+    }
+    
+    
 }
 
 - (IBAction)switchButtonPressed:(id)sender {

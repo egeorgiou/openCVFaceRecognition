@@ -33,6 +33,7 @@
 
 @property (strong, nonatomic) IBOutlet FXLabel *nameLabel;
 @property (nonatomic, strong) TYMProgressBarView *progressBarView;
+@property (nonatomic, strong) MBProgressHUD *hud;
 
 - (IBAction)switchButtonPressed:(id)sender;
 @end
