@@ -16,7 +16,7 @@ BOOL modeltrained;
 
 @implementation recognitionViewController
 
-@synthesize videoCamera, previewImage, peopleArray, peopleDictionary, peopleNameDictionary, nameLabel;
+@synthesize videoCamera, previewImage, peopleArray, peopleDictionary, peopleNameDictionary, nameLabel, progressBarView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,7 +41,7 @@ BOOL modeltrained;
         NSLog(@"Could not load face cascade: %@", faceCascadePath);
     }
     
-    model = cv::createEigenFaceRecognizer();
+    model = cv::createFisherFaceRecognizer();
     
     //previewImage.layer.borderWidth=5;
     //previewImage.layer.borderColor=[UIColor blackColor].CGColor;
@@ -57,6 +57,15 @@ BOOL modeltrained;
     nameLabel.innerShadowColor = [UIColor colorWithWhite:0.0f alpha:0.8f];
     nameLabel.innerShadowOffset = CGSizeMake(1.0f, 1.0f);
     
+    progressBarView = [[TYMProgressBarView alloc] initWithFrame:CGRectZero];
+    progressBarView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    
+    CGFloat offsetX = 30.0f;
+    CGFloat offsetY = 70.0f;
+    CGFloat width = (self.view.bounds.size.width - offsetX * 2);
+    progressBarView.frame = CGRectMake(offsetX, offsetY, width, 26.0f);
+    [self.view addSubview:self.progressBarView];
+    
     [self setupCamera];
     
 }
@@ -69,11 +78,10 @@ BOOL modeltrained;
 	
 	[hud showAnimated:YES whileExecutingBlock:^{
 		[self trainModel];
+        [videoCamera start];
 	} completionBlock:^{
 		[hud removeFromSuperview];
 	}];
- 
-    [videoCamera start];
 }
 
 -(void) viewDidDisappear:(BOOL)animated
@@ -121,22 +129,36 @@ BOOL modeltrained;
                 
                 NSString *confidenceText = [[NSString alloc] init];
                 
-                if (confidence > 3000) {
-                    confidenceText = @" (Low)";
+                if (confidence > 4500) {
+                    [nameLabel setText:@"Confidence low"];
                 }
-                else if (confidence > 2000) {
+                else if (confidence >= 3000 && confidence <= 4500) {
                     confidenceText = @" (Med)";
-                } else if (confidence < 1000) {
+                } else if (confidence < 3000) {
                     confidenceText = @" (High)";
                 }
+                
+                double progress = ((5000 - confidence) / 5000);
+                
+                if (progress < 0) {
+                    progress = 0;
+                } else if (progress >= 1) {
+                    progress = 1;
+                }
+                
+                progressBarView.progress = progress;
                 
                 //[confidenceLabel setText:[NSString stringWithFormat:@"%f", confidence]];
                 
                 if (predicted == -1) {
                     [nameLabel setText:@"face not in db"];
                 } else {
-                    People *record = [peopleArray objectAtIndex:predicted];
-                    [nameLabel setText:[NSString stringWithFormat:@"%@%@", record.name, confidenceText]];
+                    if (confidence > 4500) {
+                        [nameLabel setText:@"Confidence low"];
+                    } else {
+                        People *record = [peopleArray objectAtIndex:predicted];
+                        [nameLabel setText:[NSString stringWithFormat:@"%@%@", record.name, confidenceText]];
+                    }
                 }
             });
         }

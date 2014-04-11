@@ -14,7 +14,7 @@
 #import <CRToast/CRToast.h>
 #import <MBProgressHUD/MBProgressHUD.h>
 #import "FXLabel.h"
-
+#import "TYMProgressBarView.h"
 
 @interface recognitionViewController : UIViewController <CvVideoCameraDelegate>
 {
@@ -32,6 +32,7 @@
 @property (strong, nonatomic) NSMutableDictionary *peopleNameDictionary;
 
 @property (strong, nonatomic) IBOutlet FXLabel *nameLabel;
+@property (nonatomic, strong) TYMProgressBarView *progressBarView;
 
 - (IBAction)switchButtonPressed:(id)sender;
 @end
