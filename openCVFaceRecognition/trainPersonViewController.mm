@@ -17,7 +17,7 @@ int frameNumber = 0;
 
 @implementation trainPersonViewController
 
-@synthesize videoCamera, previewImage, person, sampleTakenLabel;
+@synthesize videoCamera, previewImage, person, sampleTakenLabel, progressBarView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -41,6 +41,19 @@ int frameNumber = 0;
     if (!faceCascade.load([faceCascadePath UTF8String])) {
         NSLog(@"Could not load face cascade: %@", faceCascadePath);
     }
+    
+    progressBarView = [[TYMProgressBarView alloc] initWithFrame:CGRectZero];
+    progressBarView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    
+    CGFloat offsetX = 30.0f;
+    CGFloat offsetY = 70.0f;
+    CGFloat width = (self.view.bounds.size.width - offsetX * 2);
+    progressBarView.frame = CGRectMake(offsetX, offsetY, width, 26.0f);
+    [self.view addSubview:self.progressBarView];
+    
+    previewImage.layer.shadowColor=[UIColor grayColor].CGColor;
+    previewImage.layer.shadowOffset=CGSizeMake(2, 2);
+    previewImage.layer.shadowOpacity=1.0;
     
     [self setupCamera];
 }

@@ -36,6 +36,8 @@
 		4471C8CE18EED052008CAD18 /* recognitionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4471C8CD18EED052008CAD18 /* recognitionViewController.mm */; };
 		44BD497118E1CAAB00417055 /* trainPersonViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 44BD497018E1CAAB00417055 /* trainPersonViewController.mm */; };
 		44BD497318E1D19300417055 /* haarcascade_frontalface_alt2.xml in Resources */ = {isa = PBXBuildFile; fileRef = 44BD497218E1D19300417055 /* haarcascade_frontalface_alt2.xml */; };
+		44ED1E8418F7794100382F8A /* Highlights-circles-background-light-background-hd-1136x640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44ED1E8318F7794100382F8A /* Highlights-circles-background-light-background-hd-1136x640.jpg */; };
+		44ED1E8618F77C0D00382F8A /* Gradient-light-dark-background-1136x640.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 44ED1E8518F77C0D00382F8A /* Gradient-light-dark-background-1136x640.jpg */; };
 		5315BE7E4BAE4FEE977E8786 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9CF66E5CD2443F083D8D637 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +91,8 @@
 		44BD496F18E1CAAB00417055 /* trainPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = trainPersonViewController.h; sourceTree = "<group>"; };
 		44BD497018E1CAAB00417055 /* trainPersonViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = trainPersonViewController.mm; sourceTree = "<group>"; };
 		44BD497218E1D19300417055 /* haarcascade_frontalface_alt2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = haarcascade_frontalface_alt2.xml; sourceTree = "<group>"; };
+		44ED1E8318F7794100382F8A /* Highlights-circles-background-light-background-hd-1136x640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Highlights-circles-background-light-background-hd-1136x640.jpg"; sourceTree = "<group>"; };
+		44ED1E8518F77C0D00382F8A /* Gradient-light-dark-background-1136x640.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Gradient-light-dark-background-1136x640.jpg"; sourceTree = "<group>"; };
 		CBE41EC740A64EAA844CAECA /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F9CF66E5CD2443F083D8D637 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -215,6 +219,8 @@
 		442B5F3018DC872B002ECFD2 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				44ED1E8518F77C0D00382F8A /* Gradient-light-dark-background-1136x640.jpg */,
+				44ED1E8318F7794100382F8A /* Highlights-circles-background-light-background-hd-1136x640.jpg */,
 				4463EEA618F220C500CF1430 /* 00095.png */,
 				442B5F3718DC8C11002ECFD2 /* profile-photo.jpg */,
 				442B5F2B18DC8450002ECFD2 /* 123-id-card.png */,
@@ -305,8 +311,10 @@
 				442B5F2C18DC8450002ECFD2 /* 123-id-card.png in Resources */,
 				44BD497318E1D19300417055 /* haarcascade_frontalface_alt2.xml in Resources */,
 				442B5F0C18DC6A7C002ECFD2 /* Images.xcassets in Resources */,
+				44ED1E8618F77C0D00382F8A /* Gradient-light-dark-background-1136x640.jpg in Resources */,
 				442B5EFE18DC6A7C002ECFD2 /* Main_iPhone.storyboard in Resources */,
 				442B5F3818DC8C11002ECFD2 /* profile-photo.jpg in Resources */,
+				44ED1E8418F7794100382F8A /* Highlights-circles-background-light-background-hd-1136x640.jpg in Resources */,
 				4463EEA718F220C500CF1430 /* 00095.png in Resources */,
 				442B5EF518DC6A7C002ECFD2 /* InfoPlist.strings in Resources */,
 				442B5F2A18DC842D002ECFD2 /* 112-group.png in Resources */,

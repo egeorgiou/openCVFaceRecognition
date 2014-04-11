@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "68E5041BE99B484F82CA6CCF"
+               BlueprintIdentifier = "8D76CBC35E1E4664BC68827D"
                BuildableName = "libPods-PXAlertView.a"
                BlueprintName = "Pods-PXAlertView"
                ReferencedContainer = "container:Pods.xcodeproj">

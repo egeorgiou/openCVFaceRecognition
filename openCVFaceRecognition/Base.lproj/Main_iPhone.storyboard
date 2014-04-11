@@ -386,37 +386,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient-light-dark-background-1136x640.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cIT-rF-NB7">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="656"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile-photo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="zme-KO-hG0">
-                                <rect key="frame" x="20" y="144" width="280" height="280"/>
+                                <rect key="frame" x="20" y="138" width="280" height="292"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="hFc-X2-BkG"/>
-                                    <constraint firstAttribute="width" constant="280" id="rJh-DJ-PhC"/>
+                                    <constraint firstAttribute="height" constant="292" id="9EF-lV-OSR"/>
+                                    <constraint firstAttribute="width" constant="280" id="IDh-UG-T2t"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Yp-VV-ekh">
-                                <rect key="frame" x="20" y="432" width="135" height="30"/>
+                                <rect key="frame" x="20" y="438" width="135" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="135" id="GbA-2S-Vxp"/>
+                                    <constraint firstAttribute="width" constant="135" id="Hgs-Lq-PvL"/>
                                 </constraints>
-                                <state key="normal" title="Start Training">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Start Training"/>
                                 <connections>
                                     <action selector="startTrainingButtonPressed:" destination="q4F-Yk-DmS" eventType="touchUpInside" id="x27-Ce-uFx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zve-FN-UJE">
-                                <rect key="frame" x="20" y="115" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIm-Cn-lnP">
-                                <rect key="frame" x="163" y="432" width="137" height="30"/>
+                                <rect key="frame" x="165" y="438" width="135" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Stop Training">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -427,20 +424,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Zve-FN-UJE" firstAttribute="trailing" secondItem="zme-KO-hG0" secondAttribute="trailing" id="8b1-fp-biM"/>
-                            <constraint firstItem="zme-KO-hG0" firstAttribute="trailing" secondItem="eIm-Cn-lnP" secondAttribute="trailing" id="QGW-Jh-dql"/>
-                            <constraint firstItem="Zve-FN-UJE" firstAttribute="leading" secondItem="AlF-FK-6sG" secondAttribute="leading" constant="20" symbolic="YES" id="SDC-7Q-8Fu"/>
-                            <constraint firstItem="8Yp-VV-ekh" firstAttribute="leading" secondItem="zme-KO-hG0" secondAttribute="leading" id="URf-Xf-XXj"/>
-                            <constraint firstItem="zme-KO-hG0" firstAttribute="centerY" secondItem="AlF-FK-6sG" secondAttribute="centerY" id="XXK-zo-A0W"/>
-                            <constraint firstItem="8Yp-VV-ekh" firstAttribute="baseline" secondItem="eIm-Cn-lnP" secondAttribute="baseline" id="fFP-li-tTR"/>
-                            <constraint firstItem="8Yp-VV-ekh" firstAttribute="top" secondItem="zme-KO-hG0" secondAttribute="bottom" constant="8" symbolic="YES" id="m47-pR-1sY"/>
-                            <constraint firstItem="zme-KO-hG0" firstAttribute="top" secondItem="Zve-FN-UJE" secondAttribute="bottom" constant="8" symbolic="YES" id="p2V-rW-61o"/>
-                            <constraint firstItem="eIm-Cn-lnP" firstAttribute="leading" secondItem="8Yp-VV-ekh" secondAttribute="trailing" constant="8" symbolic="YES" id="qw6-J6-c7n"/>
-                            <constraint firstItem="zme-KO-hG0" firstAttribute="leading" secondItem="Zve-FN-UJE" secondAttribute="leading" id="vZq-Ke-uGs"/>
+                            <constraint firstItem="zme-KO-hG0" firstAttribute="centerY" secondItem="AlF-FK-6sG" secondAttribute="centerY" id="15r-gh-3hH"/>
+                            <constraint firstItem="eIm-Cn-lnP" firstAttribute="top" secondItem="zme-KO-hG0" secondAttribute="bottom" constant="8" symbolic="YES" id="1xC-AC-XuH"/>
+                            <constraint firstAttribute="bottom" secondItem="cIT-rF-NB7" secondAttribute="bottom" constant="-88" id="EDt-IG-my1"/>
+                            <constraint firstItem="8Yp-VV-ekh" firstAttribute="leading" secondItem="zme-KO-hG0" secondAttribute="leading" id="JbG-PZ-2pn"/>
+                            <constraint firstItem="zme-KO-hG0" firstAttribute="leading" secondItem="AlF-FK-6sG" secondAttribute="leading" constant="20" symbolic="YES" id="XOP-rz-7wp"/>
+                            <constraint firstItem="AbZ-lR-rcq" firstAttribute="top" secondItem="8Yp-VV-ekh" secondAttribute="bottom" constant="13" id="ZBV-72-5JC"/>
+                            <constraint firstItem="zme-KO-hG0" firstAttribute="centerX" secondItem="cIT-rF-NB7" secondAttribute="centerX" id="ZEL-kA-5dX"/>
+                            <constraint firstItem="zme-KO-hG0" firstAttribute="trailing" secondItem="eIm-Cn-lnP" secondAttribute="trailing" id="ZeW-qd-ouS"/>
+                            <constraint firstItem="cIT-rF-NB7" firstAttribute="top" secondItem="AlF-FK-6sG" secondAttribute="top" id="bCi-Qu-nOZ"/>
+                            <constraint firstItem="8Yp-VV-ekh" firstAttribute="bottom" secondItem="eIm-Cn-lnP" secondAttribute="bottom" id="bZc-f5-mSj"/>
+                            <constraint firstItem="eIm-Cn-lnP" firstAttribute="leading" secondItem="8Yp-VV-ekh" secondAttribute="trailing" constant="10" id="eWT-kD-xTZ"/>
+                            <constraint firstItem="8Yp-VV-ekh" firstAttribute="top" secondItem="zme-KO-hG0" secondAttribute="bottom" constant="8" symbolic="YES" id="ibD-uE-Zgh"/>
+                            <constraint firstItem="cIT-rF-NB7" firstAttribute="leading" secondItem="AlF-FK-6sG" secondAttribute="leading" id="psw-0Q-ttC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Training Person" id="xFM-3n-kej">
-                        <barButtonItem key="rightBarButtonItem" title="switch" id="lRv-jf-D64">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="lRv-jf-D64">
                             <connections>
                                 <action selector="switchButtonPressed:" destination="q4F-Yk-DmS" id="dVP-Li-ZTC"/>
                             </connections>
@@ -448,7 +448,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="previewImage" destination="zme-KO-hG0" id="eFi-Dj-9aD"/>
-                        <outlet property="sampleTakenLabel" destination="Zve-FN-UJE" id="kAD-DT-DNa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="na9-SN-vpT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -460,6 +459,7 @@
         <image name="00095.png" width="640" height="960"/>
         <image name="112-group.png" width="32" height="21"/>
         <image name="123-id-card.png" width="24" height="17"/>
+        <image name="Gradient-light-dark-background-1136x640.jpg" width="640" height="1136"/>
         <image name="profile-photo.jpg" width="500" height="500"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

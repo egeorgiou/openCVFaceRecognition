@@ -11,6 +11,7 @@
 #import "People.h"
 #import "Images.h"
 #import <opencv2/highgui/cap_ios.h>
+#import "TYMProgressBarView.h"
 
 @interface trainPersonViewController : UIViewController <CvVideoCameraDelegate>
 {
@@ -23,6 +24,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *previewImage;
 
 @property (strong, nonatomic) IBOutlet UILabel *sampleTakenLabel;
+@property (nonatomic, strong) TYMProgressBarView *progressBarView;
 
 - (IBAction)startTrainingButtonPressed:(id)sender;
 - (IBAction)stopTrainingButtonPressed:(id)sender;
